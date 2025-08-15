@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.player {
+    max-width: 300px;
+    margin: auto;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background: #ff4757;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+}
