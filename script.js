@@ -1,7 +1,9 @@
 const songs = [
-    { title: "Song One", artist: "Artist A", src: "songs/song1.mp3" },
-    { title: "Song Two", artist: "Artist B", src: "songs/song2.mp3" },
-    { title: "Song Three", artist: "Artist C", src: "songs/song3.mp3" }
+    { 
+        title: "Faded", 
+        artist: "Alan Walker", 
+        src: "redventdigitalmedia.co.za - Alan Walker - Faded (320 KBps) (1).mp3" 
+    }
 ];
 
 let currentSongIndex = 0;
@@ -51,7 +53,9 @@ prevBtn.addEventListener("click", () => {
 });
 
 audio.addEventListener("timeupdate", () => {
-    progress.value = (audio.currentTime / audio.duration) * 100;
+    if (audio.duration) {
+        progress.value = (audio.currentTime / audio.duration) * 100;
+    }
 });
 
 progress.addEventListener("input", () => {
@@ -62,5 +66,4 @@ volumeControl.addEventListener("input", () => {
     audio.volume = volumeControl.value;
 });
 
-// Load first song
 loadSong(songs[currentSongIndex]);
